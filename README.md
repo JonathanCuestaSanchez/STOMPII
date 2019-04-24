@@ -145,3 +145,35 @@ Para ver cómo manejar esto desde el manejador de eventos STOMP del servidor, re
 
 ### Diagrama FINAL
 ![](DiagramaFinal.png)
+
+# Laboratorio Balanceador De carga
+iniciamos el active mq:  
+![](fotos/1.PNG)  
+accedemos a ver si funciona:  
+![](fotos/2.PNG)  
+![](fotos/3.PNG)  
+verificamos que funcione en ambas maquinas:  
+![](fotos/4.PNG)  
+![](fotos/5.PNG)  
+modificamos el nginx  
+![](fotos/6.PNG)  
+y ejecutamos:  
+![](fotos/7.PNG)  
+![](fotos/8.PNG)  
+ahora vamos a segmentar por conexiones cada servidor:  
+![](fotos/9.PNG)  
+testeamos y vemos que esta balanceando la carga:
+![](fotos/10.PNG)  
+ahora matamos un servidor y notamos lo que pasa:  
+![](fotos/11.PNG)  
+posteriormente crearemos la cuenta de lemur:
+![](fotos/12.PNG)  
+![](fotos/13.PNG)  
+![](fotos/14.PNG)  
+y verificamos las credenciales recibidas:  
+![](fotos/15.PNG)  
+modificamos los java para que ahora se conecten al servidor recien creado (se evidencia en la rama cloud-based-mom)
+corremos y evidenciamos las nuevas conexiones:  
+![](fotos/16.PNG)  
+![](fotos/17.PNG)  
+
