@@ -49,7 +49,7 @@ var app = (function () {
         stompClient = Stomp.over(socket);
         
         //subscribe to /topic/TOPICXX when connections succeed
-        stompClient.connect({}, function (frame) {
+        stompClient.connect("zelikrrs", "8rqat0_FhfbgxitawdT9MKBv8Wyur0aH", function (frame) {
             console.log('Connected: ' + frame);
             // 2 par el topico y lo que realizara al recibir un evento
             stompClient.subscribe('/topic/newpoint.'+channel, function (eventbody) {
